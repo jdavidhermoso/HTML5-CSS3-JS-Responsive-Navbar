@@ -1,3 +1,11 @@
+
+/* COLORS */
+/* 
+	primary color: #1800FF;
+
+	secondary color: #5E6DFF;
+*/
+
 /*  GENERAL STRUCTURE STYLES */
 
 html, body {
@@ -19,4 +27,164 @@ html, body {
 	max-height: 100%;
 
 	margin: 0 auto;
+}
+
+.responsive-menu-button {
+	
+
+	display: none;
+
+	position: fixed;
+
+	top: 0;
+
+	width: 100%;
+	
+	background-color:  #1800FF;
+
+	padding: 2px 0px;
+
+}
+
+.responsive-menu-icon {
+	text-align: left;
+	margin: 0;
+	font-size: 2em;	
+}
+
+.responsive-menu-icon i {
+	margin: 20px;
+
+	color: #FFFFFF;
+}
+
+
+
+
+
+/* LISTS */
+nav > ul {
+	width: 100%;
+	max-width: 100%;
+
+	height: 50px;
+}
+
+ul {
+	position: fixed;
+	top: 0;
+
+	margin: 0;
+	padding: 0;
+
+
+	list-style: none;
+	background-color: #1800FF;
+}
+
+
+
+
+li {
+	
+	display: inline-block;
+
+	float: left;
+
+	/* STYLING */
+
+	margin-left: 15px;
+	margin-right: 15px;
+}
+
+
+li .submenu {
+	/* Submenus are hidden */
+	display: none;
+	top: 50px;
+}
+
+.submenu li {
+	/* Submenu links vertical shown */
+	
+	display: block;
+	
+	float: none;
+
+	margin-left: 0;
+	margin-right: 0;
+
+}
+
+
+
+
+/* LINKS */
+
+
+nav a {
+	min-width: 120px;
+
+	display: block;
+
+	text-align: center;
+	text-decoration: none;
+
+	line-height: 40px;
+
+	color: #FFFFFF;
+	height: 100%;
+	padding: 5px;
+	margin: 0;
+
+}
+
+nav a:hover {
+	background-color: #5E6DFF;
+
+}
+
+.submenu a {
+	padding: 10px;
+}
+
+
+/* SHOW SUBMENUS */
+
+nav a:hover + .submenu, .submenu:hover { 	
+	display: block;
+}
+
+@media (max-width : 930px) {
+
+	nav>ul {
+		display: none;
+	}
+
+	li, .submenu {
+		position: relative;
+		
+		width: 100%;
+		max-width: 100%;
+
+		margin-left: 0;
+		margin-right: 0;
+	}
+
+	nav a:hover + .submenu, .submenu:hover { 
+		/* We'll make submenus appear with javascript in smartphones and tablets by tapping / clicking */	
+		display: none;
+	}
+
+	.responsive-menu-button {
+		display: block;
+	}
+
+	main {
+		text-align: center;
+	}
+}
+
+main {
+	margin-top: 100px;
 }
